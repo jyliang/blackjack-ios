@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CardCell : UICollectionViewCell
+@class Card;
+
+@interface CardCollectionViewCell : UICollectionViewCell
+
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (strong, nonatomic) Card *card;
+@property (nonatomic) BOOL shouldShowCard;
 
 @end

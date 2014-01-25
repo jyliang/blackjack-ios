@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Hand.h"
 
-@interface CardCollectionViewController : UIViewController
+
+
+@interface CardCollectionViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+
+@property (strong, nonatomic) Hand *currentHand;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
+- (void)addCard:(Card *)card;
 
 @end

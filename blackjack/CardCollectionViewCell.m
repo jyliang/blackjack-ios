@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 jasonliang. All rights reserved.
 //
 
-#import "CardCell.h"
+#import "CardCollectionViewCell.h"
 
-@implementation CardCell
+@implementation CardCollectionViewCell
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -19,13 +19,5 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

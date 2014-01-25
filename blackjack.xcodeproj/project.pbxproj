@@ -27,7 +27,11 @@
 		4F36861E1894558800B02264 /* CardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F36861D1894558800B02264 /* CardCollectionViewController.m */; };
 		4F36862118945CAE00B02264 /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F36862018945CAE00B02264 /* SettingsStoryboard.storyboard */; };
 		4F36862318945CB800B02264 /* AboutStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F36862218945CB800B02264 /* AboutStoryboard.storyboard */; };
-		4F36862518945DDF00B02264 /* DeckCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F36862418945DDF00B02264 /* DeckCollectionView.xib */; };
+		4F3686281894605400B02264 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3686271894605400B02264 /* Card.m */; };
+		4F36862B1894619300B02264 /* Hand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F36862A1894619300B02264 /* Hand.m */; };
+		4F36862E189461DC00B02264 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F36862D189461DC00B02264 /* Deck.m */; };
+		4F36863218946CAD00B02264 /* CardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F36863118946CAD00B02264 /* CardCollectionViewCell.m */; };
+		4F36863418946D0000B02264 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F36863318946D0000B02264 /* CardCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +74,15 @@
 		4F36861D1894558800B02264 /* CardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewController.m; sourceTree = "<group>"; };
 		4F36862018945CAE00B02264 /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
 		4F36862218945CB800B02264 /* AboutStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AboutStoryboard.storyboard; sourceTree = "<group>"; };
-		4F36862418945DDF00B02264 /* DeckCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeckCollectionView.xib; sourceTree = "<group>"; };
+		4F3686261894605400B02264 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		4F3686271894605400B02264 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		4F3686291894619300B02264 /* Hand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hand.h; sourceTree = "<group>"; };
+		4F36862A1894619300B02264 /* Hand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hand.m; sourceTree = "<group>"; };
+		4F36862C189461DC00B02264 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
+		4F36862D189461DC00B02264 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
+		4F36863018946CAD00B02264 /* CardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCollectionViewCell.h; sourceTree = "<group>"; };
+		4F36863118946CAD00B02264 /* CardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewCell.m; sourceTree = "<group>"; };
+		4F36863318946D0000B02264 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +147,7 @@
 				4F36860E1894519500B02264 /* Manager */,
 				4F36860D1894519000B02264 /* Model */,
 				4F36860C1894518500B02264 /* ViewController */,
+				4F36862F18946C9D00B02264 /* View */,
 				4F0768BD18944FDD00A84A26 /* AppDelegate.h */,
 				4F0768BE18944FDD00A84A26 /* AppDelegate.m */,
 				4F0768C918944FDD00A84A26 /* Images.xcassets */,
@@ -192,6 +205,12 @@
 		4F36860D1894519000B02264 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4F3686261894605400B02264 /* Card.h */,
+				4F3686271894605400B02264 /* Card.m */,
+				4F3686291894619300B02264 /* Hand.h */,
+				4F36862A1894619300B02264 /* Hand.m */,
+				4F36862C189461DC00B02264 /* Deck.h */,
+				4F36862D189461DC00B02264 /* Deck.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -216,9 +235,18 @@
 				4F0768C018944FDD00A84A26 /* Main.storyboard */,
 				4F36862018945CAE00B02264 /* SettingsStoryboard.storyboard */,
 				4F36862218945CB800B02264 /* AboutStoryboard.storyboard */,
-				4F36862418945DDF00B02264 /* DeckCollectionView.xib */,
+				4F36863318946D0000B02264 /* CardCollectionViewCell.xib */,
 			);
 			name = Resource;
+			sourceTree = "<group>";
+		};
+		4F36862F18946C9D00B02264 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4F36863018946CAD00B02264 /* CardCollectionViewCell.h */,
+				4F36863118946CAD00B02264 /* CardCollectionViewCell.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,8 +326,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F0768CA18944FDD00A84A26 /* Images.xcassets in Resources */,
-				4F36862518945DDF00B02264 /* DeckCollectionView.xib in Resources */,
 				4F0768B918944FDD00A84A26 /* InfoPlist.strings in Resources */,
+				4F36863418946D0000B02264 /* CardCollectionViewCell.xib in Resources */,
 				4F36862318945CB800B02264 /* AboutStoryboard.storyboard in Resources */,
 				4F36862118945CAE00B02264 /* SettingsStoryboard.storyboard in Resources */,
 				4F0768C218944FDD00A84A26 /* Main.storyboard in Resources */,
@@ -321,12 +349,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F36862E189461DC00B02264 /* Deck.m in Sources */,
 				4F3686121894531600B02264 /* BlackJackTableViewController.m in Sources */,
 				4F36861B1894547200B02264 /* BaseViewController.m in Sources */,
 				4F3686181894532900B02264 /* AboutViewController.m in Sources */,
+				4F3686281894605400B02264 /* Card.m in Sources */,
 				4F0768BF18944FDD00A84A26 /* AppDelegate.m in Sources */,
 				4F0768BB18944FDD00A84A26 /* main.m in Sources */,
+				4F36862B1894619300B02264 /* Hand.m in Sources */,
 				4F3686151894532100B02264 /* SettingsViewController.m in Sources */,
+				4F36863218946CAD00B02264 /* CardCollectionViewCell.m in Sources */,
 				4F36861E1894558800B02264 /* CardCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
