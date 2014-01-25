@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  CardCollectionViewController.h
 //  blackjack
 //
 //  Created by Jason Liang on 1/25/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface CardCollectionViewController : UIViewController
 
 @end

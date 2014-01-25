@@ -14,14 +14,20 @@
 		4F0768BB18944FDD00A84A26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0768BA18944FDD00A84A26 /* main.m */; };
 		4F0768BF18944FDD00A84A26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0768BE18944FDD00A84A26 /* AppDelegate.m */; };
 		4F0768C218944FDD00A84A26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0768C018944FDD00A84A26 /* Main.storyboard */; };
-		4F0768C518944FDD00A84A26 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0768C418944FDD00A84A26 /* FirstViewController.m */; };
-		4F0768C818944FDD00A84A26 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0768C718944FDD00A84A26 /* SecondViewController.m */; };
 		4F0768CA18944FDD00A84A26 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F0768C918944FDD00A84A26 /* Images.xcassets */; };
 		4F0768D118944FDD00A84A26 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0768D018944FDD00A84A26 /* XCTest.framework */; };
 		4F0768D218944FDD00A84A26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0768AE18944FDD00A84A26 /* Foundation.framework */; };
 		4F0768D318944FDD00A84A26 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0768B218944FDD00A84A26 /* UIKit.framework */; };
 		4F0768DB18944FDD00A84A26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4F0768D918944FDD00A84A26 /* InfoPlist.strings */; };
 		4F0768DD18944FDD00A84A26 /* blackjackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0768DC18944FDD00A84A26 /* blackjackTests.m */; };
+		4F3686121894531600B02264 /* BlackJackTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3686111894531600B02264 /* BlackJackTableViewController.m */; };
+		4F3686151894532100B02264 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3686141894532100B02264 /* SettingsViewController.m */; };
+		4F3686181894532900B02264 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3686171894532900B02264 /* AboutViewController.m */; };
+		4F36861B1894547200B02264 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F36861A1894547200B02264 /* BaseViewController.m */; };
+		4F36861E1894558800B02264 /* CardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F36861D1894558800B02264 /* CardCollectionViewController.m */; };
+		4F36862118945CAE00B02264 /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F36862018945CAE00B02264 /* SettingsStoryboard.storyboard */; };
+		4F36862318945CB800B02264 /* AboutStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F36862218945CB800B02264 /* AboutStoryboard.storyboard */; };
+		4F36862518945DDF00B02264 /* DeckCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F36862418945DDF00B02264 /* DeckCollectionView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +52,25 @@
 		4F0768BD18944FDD00A84A26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4F0768BE18944FDD00A84A26 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4F0768C118944FDD00A84A26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4F0768C318944FDD00A84A26 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		4F0768C418944FDD00A84A26 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		4F0768C618944FDD00A84A26 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		4F0768C718944FDD00A84A26 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		4F0768C918944FDD00A84A26 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4F0768CF18944FDD00A84A26 /* blackjackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blackjackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F0768D018944FDD00A84A26 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4F0768D818944FDD00A84A26 /* blackjackTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "blackjackTests-Info.plist"; sourceTree = "<group>"; };
 		4F0768DA18944FDD00A84A26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4F0768DC18944FDD00A84A26 /* blackjackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = blackjackTests.m; sourceTree = "<group>"; };
+		4F3686101894531600B02264 /* BlackJackTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackJackTableViewController.h; sourceTree = "<group>"; };
+		4F3686111894531600B02264 /* BlackJackTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackJackTableViewController.m; sourceTree = "<group>"; };
+		4F3686131894532100B02264 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		4F3686141894532100B02264 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		4F3686161894532900B02264 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		4F3686171894532900B02264 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		4F3686191894547200B02264 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		4F36861A1894547200B02264 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		4F36861C1894558800B02264 /* CardCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCollectionViewController.h; sourceTree = "<group>"; };
+		4F36861D1894558800B02264 /* CardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewController.m; sourceTree = "<group>"; };
+		4F36862018945CAE00B02264 /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
+		4F36862218945CB800B02264 /* AboutStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AboutStoryboard.storyboard; sourceTree = "<group>"; };
+		4F36862418945DDF00B02264 /* DeckCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeckCollectionView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,13 +130,13 @@
 		4F0768B418944FDD00A84A26 /* blackjack */ = {
 			isa = PBXGroup;
 			children = (
+				4F36861F1894558D00B02264 /* Resource */,
+				4F36860F1894519C00B02264 /* Utility */,
+				4F36860E1894519500B02264 /* Manager */,
+				4F36860D1894519000B02264 /* Model */,
+				4F36860C1894518500B02264 /* ViewController */,
 				4F0768BD18944FDD00A84A26 /* AppDelegate.h */,
 				4F0768BE18944FDD00A84A26 /* AppDelegate.m */,
-				4F0768C018944FDD00A84A26 /* Main.storyboard */,
-				4F0768C318944FDD00A84A26 /* FirstViewController.h */,
-				4F0768C418944FDD00A84A26 /* FirstViewController.m */,
-				4F0768C618944FDD00A84A26 /* SecondViewController.h */,
-				4F0768C718944FDD00A84A26 /* SecondViewController.m */,
 				4F0768C918944FDD00A84A26 /* Images.xcassets */,
 				4F0768B518944FDD00A84A26 /* Supporting Files */,
 			);
@@ -155,6 +170,55 @@
 				4F0768D918944FDD00A84A26 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4F36860C1894518500B02264 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4F3686101894531600B02264 /* BlackJackTableViewController.h */,
+				4F3686111894531600B02264 /* BlackJackTableViewController.m */,
+				4F3686131894532100B02264 /* SettingsViewController.h */,
+				4F3686141894532100B02264 /* SettingsViewController.m */,
+				4F3686161894532900B02264 /* AboutViewController.h */,
+				4F3686171894532900B02264 /* AboutViewController.m */,
+				4F3686191894547200B02264 /* BaseViewController.h */,
+				4F36861A1894547200B02264 /* BaseViewController.m */,
+				4F36861C1894558800B02264 /* CardCollectionViewController.h */,
+				4F36861D1894558800B02264 /* CardCollectionViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		4F36860D1894519000B02264 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4F36860E1894519500B02264 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		4F36860F1894519C00B02264 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		4F36861F1894558D00B02264 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4F0768C018944FDD00A84A26 /* Main.storyboard */,
+				4F36862018945CAE00B02264 /* SettingsStoryboard.storyboard */,
+				4F36862218945CB800B02264 /* AboutStoryboard.storyboard */,
+				4F36862418945DDF00B02264 /* DeckCollectionView.xib */,
+			);
+			name = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +298,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F0768CA18944FDD00A84A26 /* Images.xcassets in Resources */,
+				4F36862518945DDF00B02264 /* DeckCollectionView.xib in Resources */,
 				4F0768B918944FDD00A84A26 /* InfoPlist.strings in Resources */,
+				4F36862318945CB800B02264 /* AboutStoryboard.storyboard in Resources */,
+				4F36862118945CAE00B02264 /* SettingsStoryboard.storyboard in Resources */,
 				4F0768C218944FDD00A84A26 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,10 +321,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F0768C818944FDD00A84A26 /* SecondViewController.m in Sources */,
+				4F3686121894531600B02264 /* BlackJackTableViewController.m in Sources */,
+				4F36861B1894547200B02264 /* BaseViewController.m in Sources */,
+				4F3686181894532900B02264 /* AboutViewController.m in Sources */,
 				4F0768BF18944FDD00A84A26 /* AppDelegate.m in Sources */,
-				4F0768C518944FDD00A84A26 /* FirstViewController.m in Sources */,
 				4F0768BB18944FDD00A84A26 /* main.m in Sources */,
+				4F3686151894532100B02264 /* SettingsViewController.m in Sources */,
+				4F36861E1894558800B02264 /* CardCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
