@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F0768AF18944FDD00A84A26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0768AE18944FDD00A84A26 /* Foundation.framework */; };
+		4F0768B118944FDD00A84A26 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0768B018944FDD00A84A26 /* CoreGraphics.framework */; };
+		4F0768B318944FDD00A84A26 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0768B218944FDD00A84A26 /* UIKit.framework */; };
+		4F0768B918944FDD00A84A26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4F0768B718944FDD00A84A26 /* InfoPlist.strings */; };
+		4F0768BB18944FDD00A84A26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0768BA18944FDD00A84A26 /* main.m */; };
+		4F0768BF18944FDD00A84A26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0768BE18944FDD00A84A26 /* AppDelegate.m */; };
+		4F0768C218944FDD00A84A26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0768C018944FDD00A84A26 /* Main.storyboard */; };
+		4F0768C518944FDD00A84A26 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0768C418944FDD00A84A26 /* FirstViewController.m */; };
+		4F0768C818944FDD00A84A26 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0768C718944FDD00A84A26 /* SecondViewController.m */; };
+		4F0768CA18944FDD00A84A26 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F0768C918944FDD00A84A26 /* Images.xcassets */; };
+		4F0768D118944FDD00A84A26 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0768D018944FDD00A84A26 /* XCTest.framework */; };
+		4F0768D218944FDD00A84A26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0768AE18944FDD00A84A26 /* Foundation.framework */; };
+		4F0768D318944FDD00A84A26 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0768B218944FDD00A84A26 /* UIKit.framework */; };
+		4F0768DB18944FDD00A84A26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4F0768D918944FDD00A84A26 /* InfoPlist.strings */; };
+		4F0768DD18944FDD00A84A26 /* blackjackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0768DC18944FDD00A84A26 /* blackjackTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F0768D418944FDD00A84A26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F0768A318944FDD00A84A26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F0768AA18944FDD00A84A26;
+			remoteInfo = blackjack;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4F0768AB18944FDD00A84A26 /* blackjack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blackjack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F0768AE18944FDD00A84A26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4F0768B018944FDD00A84A26 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4F0768B218944FDD00A84A26 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4F0768B618944FDD00A84A26 /* blackjack-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "blackjack-Info.plist"; sourceTree = "<group>"; };
+		4F0768B818944FDD00A84A26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4F0768BA18944FDD00A84A26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4F0768BC18944FDD00A84A26 /* blackjack-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "blackjack-Prefix.pch"; sourceTree = "<group>"; };
+		4F0768BD18944FDD00A84A26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4F0768BE18944FDD00A84A26 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4F0768C118944FDD00A84A26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4F0768C318944FDD00A84A26 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		4F0768C418944FDD00A84A26 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		4F0768C618944FDD00A84A26 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		4F0768C718944FDD00A84A26 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		4F0768C918944FDD00A84A26 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4F0768CF18944FDD00A84A26 /* blackjackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blackjackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F0768D018944FDD00A84A26 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4F0768D818944FDD00A84A26 /* blackjackTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "blackjackTests-Info.plist"; sourceTree = "<group>"; };
+		4F0768DA18944FDD00A84A26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4F0768DC18944FDD00A84A26 /* blackjackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = blackjackTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F0768A818944FDD00A84A26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0768B118944FDD00A84A26 /* CoreGraphics.framework in Frameworks */,
+				4F0768B318944FDD00A84A26 /* UIKit.framework in Frameworks */,
+				4F0768AF18944FDD00A84A26 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F0768CC18944FDD00A84A26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0768D118944FDD00A84A26 /* XCTest.framework in Frameworks */,
+				4F0768D318944FDD00A84A26 /* UIKit.framework in Frameworks */,
+				4F0768D218944FDD00A84A26 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F0768A218944FDD00A84A26 = {
+			isa = PBXGroup;
+			children = (
+				4F0768B418944FDD00A84A26 /* blackjack */,
+				4F0768D618944FDD00A84A26 /* blackjackTests */,
+				4F0768AD18944FDD00A84A26 /* Frameworks */,
+				4F0768AC18944FDD00A84A26 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4F0768AC18944FDD00A84A26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F0768AB18944FDD00A84A26 /* blackjack.app */,
+				4F0768CF18944FDD00A84A26 /* blackjackTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F0768AD18944FDD00A84A26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F0768AE18944FDD00A84A26 /* Foundation.framework */,
+				4F0768B018944FDD00A84A26 /* CoreGraphics.framework */,
+				4F0768B218944FDD00A84A26 /* UIKit.framework */,
+				4F0768D018944FDD00A84A26 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F0768B418944FDD00A84A26 /* blackjack */ = {
+			isa = PBXGroup;
+			children = (
+				4F0768BD18944FDD00A84A26 /* AppDelegate.h */,
+				4F0768BE18944FDD00A84A26 /* AppDelegate.m */,
+				4F0768C018944FDD00A84A26 /* Main.storyboard */,
+				4F0768C318944FDD00A84A26 /* FirstViewController.h */,
+				4F0768C418944FDD00A84A26 /* FirstViewController.m */,
+				4F0768C618944FDD00A84A26 /* SecondViewController.h */,
+				4F0768C718944FDD00A84A26 /* SecondViewController.m */,
+				4F0768C918944FDD00A84A26 /* Images.xcassets */,
+				4F0768B518944FDD00A84A26 /* Supporting Files */,
+			);
+			path = blackjack;
+			sourceTree = "<group>";
+		};
+		4F0768B518944FDD00A84A26 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F0768B618944FDD00A84A26 /* blackjack-Info.plist */,
+				4F0768B718944FDD00A84A26 /* InfoPlist.strings */,
+				4F0768BA18944FDD00A84A26 /* main.m */,
+				4F0768BC18944FDD00A84A26 /* blackjack-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4F0768D618944FDD00A84A26 /* blackjackTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F0768DC18944FDD00A84A26 /* blackjackTests.m */,
+				4F0768D718944FDD00A84A26 /* Supporting Files */,
+			);
+			path = blackjackTests;
+			sourceTree = "<group>";
+		};
+		4F0768D718944FDD00A84A26 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F0768D818944FDD00A84A26 /* blackjackTests-Info.plist */,
+				4F0768D918944FDD00A84A26 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F0768AA18944FDD00A84A26 /* blackjack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F0768E018944FDD00A84A26 /* Build configuration list for PBXNativeTarget "blackjack" */;
+			buildPhases = (
+				4F0768A718944FDD00A84A26 /* Sources */,
+				4F0768A818944FDD00A84A26 /* Frameworks */,
+				4F0768A918944FDD00A84A26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = blackjack;
+			productName = blackjack;
+			productReference = 4F0768AB18944FDD00A84A26 /* blackjack.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4F0768CE18944FDD00A84A26 /* blackjackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F0768E318944FDD00A84A26 /* Build configuration list for PBXNativeTarget "blackjackTests" */;
+			buildPhases = (
+				4F0768CB18944FDD00A84A26 /* Sources */,
+				4F0768CC18944FDD00A84A26 /* Frameworks */,
+				4F0768CD18944FDD00A84A26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F0768D518944FDD00A84A26 /* PBXTargetDependency */,
+			);
+			name = blackjackTests;
+			productName = blackjackTests;
+			productReference = 4F0768CF18944FDD00A84A26 /* blackjackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F0768A318944FDD00A84A26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = jasonliang;
+				TargetAttributes = {
+					4F0768CE18944FDD00A84A26 = {
+						TestTargetID = 4F0768AA18944FDD00A84A26;
+					};
+				};
+			};
+			buildConfigurationList = 4F0768A618944FDD00A84A26 /* Build configuration list for PBXProject "blackjack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4F0768A218944FDD00A84A26;
+			productRefGroup = 4F0768AC18944FDD00A84A26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F0768AA18944FDD00A84A26 /* blackjack */,
+				4F0768CE18944FDD00A84A26 /* blackjackTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F0768A918944FDD00A84A26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0768CA18944FDD00A84A26 /* Images.xcassets in Resources */,
+				4F0768B918944FDD00A84A26 /* InfoPlist.strings in Resources */,
+				4F0768C218944FDD00A84A26 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F0768CD18944FDD00A84A26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0768DB18944FDD00A84A26 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F0768A718944FDD00A84A26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0768C818944FDD00A84A26 /* SecondViewController.m in Sources */,
+				4F0768BF18944FDD00A84A26 /* AppDelegate.m in Sources */,
+				4F0768C518944FDD00A84A26 /* FirstViewController.m in Sources */,
+				4F0768BB18944FDD00A84A26 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F0768CB18944FDD00A84A26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0768DD18944FDD00A84A26 /* blackjackTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F0768D518944FDD00A84A26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F0768AA18944FDD00A84A26 /* blackjack */;
+			targetProxy = 4F0768D418944FDD00A84A26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4F0768B718944FDD00A84A26 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F0768B818944FDD00A84A26 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4F0768C018944FDD00A84A26 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F0768C118944FDD00A84A26 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4F0768D918944FDD00A84A26 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F0768DA18944FDD00A84A26 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F0768DE18944FDD00A84A26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4F0768DF18944FDD00A84A26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4F0768E118944FDD00A84A26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "blackjack/blackjack-Prefix.pch";
+				INFOPLIST_FILE = "blackjack/blackjack-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4F0768E218944FDD00A84A26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "blackjack/blackjack-Prefix.pch";
+				INFOPLIST_FILE = "blackjack/blackjack-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4F0768E418944FDD00A84A26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/blackjack.app/blackjack";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "blackjack/blackjack-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "blackjackTests/blackjackTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		4F0768E518944FDD00A84A26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/blackjack.app/blackjack";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "blackjack/blackjack-Prefix.pch";
+				INFOPLIST_FILE = "blackjackTests/blackjackTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F0768A618944FDD00A84A26 /* Build configuration list for PBXProject "blackjack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F0768DE18944FDD00A84A26 /* Debug */,
+				4F0768DF18944FDD00A84A26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F0768E018944FDD00A84A26 /* Build configuration list for PBXNativeTarget "blackjack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F0768E118944FDD00A84A26 /* Debug */,
+				4F0768E218944FDD00A84A26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F0768E318944FDD00A84A26 /* Build configuration list for PBXNativeTarget "blackjackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F0768E418944FDD00A84A26 /* Debug */,
+				4F0768E518944FDD00A84A26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F0768A318944FDD00A84A26 /* Project object */;
+}
