@@ -32,6 +32,7 @@
 		4F36862E189461DC00B02264 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F36862D189461DC00B02264 /* Deck.m */; };
 		4F36863218946CAD00B02264 /* CardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F36863118946CAD00B02264 /* CardCollectionViewCell.m */; };
 		4F36863418946D0000B02264 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F36863318946D0000B02264 /* CardCollectionViewCell.xib */; };
+		4F36863A1894769600B02264 /* UIImage+BlackJackCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3686391894769600B02264 /* UIImage+BlackJackCards.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		4F36863018946CAD00B02264 /* CardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCollectionViewCell.h; sourceTree = "<group>"; };
 		4F36863118946CAD00B02264 /* CardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewCell.m; sourceTree = "<group>"; };
 		4F36863318946D0000B02264 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
+		4F3686381894769600B02264 /* UIImage+BlackJackCards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BlackJackCards.h"; sourceTree = "<group>"; };
+		4F3686391894769600B02264 /* UIImage+BlackJackCards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BlackJackCards.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +228,8 @@
 		4F36860F1894519C00B02264 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				4F3686381894769600B02264 /* UIImage+BlackJackCards.h */,
+				4F3686391894769600B02264 /* UIImage+BlackJackCards.m */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -359,6 +364,7 @@
 				4F36862B1894619300B02264 /* Hand.m in Sources */,
 				4F3686151894532100B02264 /* SettingsViewController.m in Sources */,
 				4F36863218946CAD00B02264 /* CardCollectionViewCell.m in Sources */,
+				4F36863A1894769600B02264 /* UIImage+BlackJackCards.m in Sources */,
 				4F36861E1894558800B02264 /* CardCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

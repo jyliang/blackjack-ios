@@ -13,7 +13,10 @@
 @interface CardCollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) Card *card;
 @property (nonatomic) BOOL shouldShowCard;
+
+- (void)configureWithCard:(Card *)card;
 
 @end

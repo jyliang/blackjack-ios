@@ -41,13 +41,12 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([CardCollectionViewCell class]) forIndexPath:indexPath];
     Card *card = [self.currentHand.cards objectAtIndex:indexPath.item];
-    cell.card = card;
-    cell.label.text = [NSString stringWithFormat:@"S%d R%d", card.suit, card.rank];
+    [cell configureWithCard:card];
     return cell;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(40, 80);
+    return CGSizeMake(40, 62);
 }
 
 #pragma mark - 

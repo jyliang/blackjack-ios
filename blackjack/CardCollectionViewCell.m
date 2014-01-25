@@ -7,6 +7,8 @@
 //
 
 #import "CardCollectionViewCell.h"
+#import "Card.h"
+#import "UIImage+BlackJackCards.h"
 
 @implementation CardCollectionViewCell
 
@@ -19,5 +21,13 @@
     return self;
 }
 
+- (void)configureWithCard:(Card *)card {
+    self.card = card;
+    
+    self.label.text = [NSString stringWithFormat:@"S%d R%d", card.suit, card.rank];
+    
+    UIImage *cardImage = [UIImage imageWithCard:card];
+    [self.imageView setImage:cardImage];
+}
 
 @end
