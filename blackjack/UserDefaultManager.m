@@ -83,10 +83,12 @@ static UserDefaultManager *instance;
 
 - (void)setMinBet:(NSInteger)amount {
     [_userDefault setObject:[NSNumber numberWithInteger:amount] forKey:kUDMinBet];
+    [_userDefault synchronize];
 }
 
 - (void)setMaxBet:(NSInteger)amount {
     [_userDefault setObject:[NSNumber numberWithInteger:amount] forKey:kUDMaxBet];
+    [_userDefault synchronize];
 }
 
 

@@ -87,6 +87,7 @@
 
 - (void)playerDoubleDown {
     if ([self playerCanDoubleDown]) {
+        [self.currentPlayer betMoney:self.currentPlayer.currentBetOnTable];
         [self dealCardToPlayer];
         [self playerTurnComplete];
     }

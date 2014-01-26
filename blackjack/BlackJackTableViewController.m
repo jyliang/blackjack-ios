@@ -14,7 +14,7 @@
 #import "Player.h"
 #import "GameManager.h"
 #import "AppDelegate.h"
-
+#import "UIButton+Style.h"
 #import "UserDefaultManager.h"
 
 @interface BlackJackTableViewController () <GameManagerDelegate>
@@ -51,6 +51,19 @@
     self.gameManager.delegate = self;
     [self updateStatus];
     [self updateBetButtons];
+    [self updateButtonStyles];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self updateBetButtons];
+}
+
+- (void)updateButtonStyles {
+    NSArray *buttons = @[self.dealButton, self.doubleDownButton, self.hitButton, self.standButton, self.clearBetButton, self.wagerIncreaseButton1, self.wagerIncreaseButton2, self.wagerIncreaseButton3];
+    for (UIButton *button in buttons) {
+        [button applyBlackButtonStyle];
+    }
 }
 
 #pragma mark - segue prep
@@ -126,19 +139,18 @@
     self.hitButton.hidden = ![self.gameManager playerCanHit];
     self.standButton.hidden = ![self.gameManager playerCanStand];
     
-    self.bankBalanceLabel.text = [NSString stringWithFormat:@"%.02f", [self.gameManager.currentPlayer getBankBalance]];
-    NSString *betBalance = [NSString stringWithFormat:@"%.02f", [self.gameManager.currentPlayer currentBetOnTable]];
+    self.bankBalanceLabel.text = [NSString stringWithFormat:@"$ %.02f", [self.gameManager.currentPlayer getBankBalance]];
+    NSString *betBalance = [NSString stringWithFormat:@"$ %.02f", [self.gameManager.currentPlayer currentBetOnTable]];
     self.betAmountLabel.text = betBalance;
     self.gamePlayStatusLabel.text = self.gameManager.gameStatusString;
-    self.wagerIncreaseButton1.hidden = self.wagerIncreaseButton2.hidden = self.wagerIncreaseButton3.hidden = ![self.gameManager playerCanAdjustBet];
-    [self.clearBetButton setEnabled:[self.gameManager playerCanAdjustBet]];
+    self.wagerIncreaseButton1.hidden = self.wagerIncreaseButton2.hidden = self.wagerIncreaseButton3.hidden = self.clearBetButton.hidden =  ![self.gameManager playerCanAdjustBet];
 }
 
 - (void)updateBetButtons {
     NSArray *values = [self.gameManager getBetIncreaseValues];
     NSArray *buttons = @[self.wagerIncreaseButton1, self.wagerIncreaseButton2, self.wagerIncreaseButton3];
     for (int i = 0; i < values.count; i++) {
-        NSString *buttonString = [NSString stringWithFormat:@"+ %@", [values objectAtIndex:i]];
+        NSString *buttonString = [NSString stringWithFormat:@"+$%@", [values objectAtIndex:i]];
         [[buttons objectAtIndex:i] setTitle:buttonString forState:UIControlStateNormal];
     }
 }

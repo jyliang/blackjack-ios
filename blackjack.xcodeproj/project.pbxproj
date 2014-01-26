@@ -21,6 +21,7 @@
 		4F0768DB18944FDD00A84A26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4F0768D918944FDD00A84A26 /* InfoPlist.strings */; };
 		4F0768DD18944FDD00A84A26 /* blackjackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0768DC18944FDD00A84A26 /* blackjackTests.m */; };
 		4F1304A51894C8F400BD03DB /* configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F1304A41894C8F400BD03DB /* configuration.plist */; };
+		4F1304A81894F8C500BD03DB /* UIButton+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1304A71894F8C500BD03DB /* UIButton+Style.m */; };
 		4F3686121894531600B02264 /* BlackJackTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3686111894531600B02264 /* BlackJackTableViewController.m */; };
 		4F3686151894532100B02264 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3686141894532100B02264 /* SettingsViewController.m */; };
 		4F3686181894532900B02264 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3686171894532900B02264 /* AboutViewController.m */; };
@@ -70,6 +71,8 @@
 		4F0768DC18944FDD00A84A26 /* blackjackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = blackjackTests.m; sourceTree = "<group>"; };
 		4F1304A11894AC3500BD03DB /* CardDealDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardDealDelegate.h; sourceTree = "<group>"; };
 		4F1304A41894C8F400BD03DB /* configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = configuration.plist; sourceTree = "<group>"; };
+		4F1304A61894F8C500BD03DB /* UIButton+Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Style.h"; sourceTree = "<group>"; };
+		4F1304A71894F8C500BD03DB /* UIButton+Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Style.m"; sourceTree = "<group>"; };
 		4F3686101894531600B02264 /* BlackJackTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackJackTableViewController.h; sourceTree = "<group>"; };
 		4F3686111894531600B02264 /* BlackJackTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackJackTableViewController.m; sourceTree = "<group>"; };
 		4F3686131894532100B02264 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -273,6 +276,8 @@
 				4F3686391894769600B02264 /* UIImage+BlackJackCards.m */,
 				4F3686411894916F00B02264 /* Utility.h */,
 				4F3686421894916F00B02264 /* Utility.m */,
+				4F1304A61894F8C500BD03DB /* UIButton+Style.h */,
+				4F1304A71894F8C500BD03DB /* UIButton+Style.m */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -397,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F36862E189461DC00B02264 /* Deck.m in Sources */,
+				4F1304A81894F8C500BD03DB /* UIButton+Style.m in Sources */,
 				4F3686121894531600B02264 /* BlackJackTableViewController.m in Sources */,
 				4F36861B1894547200B02264 /* BaseViewController.m in Sources */,
 				4F3686181894532900B02264 /* AboutViewController.m in Sources */,

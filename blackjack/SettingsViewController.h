@@ -10,4 +10,11 @@
 
 @interface SettingsViewController : BaseViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *minBetLabel;
+@property (weak, nonatomic) IBOutlet UISlider *minBetSlider;
+@property (weak, nonatomic) IBOutlet UILabel *maxBetLabel;
+@property (weak, nonatomic) IBOutlet UISlider *maxBetSlider;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
+
+
 @end
