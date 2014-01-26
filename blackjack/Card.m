@@ -19,4 +19,24 @@
     return self;
 }
 
+- (BOOL)isAce {
+    return self.rank == kRank1;
+}
+
+- (NSInteger)cardBaseValue {
+    if (self.rank > kRank10) {
+        return 10;
+    } else {
+        return self.rank + 1;
+    }
+}
+
+- (NSInteger)cardHighestValue {
+    if ([self isAce]) {
+        return 11;
+    } else {
+        return [self cardBaseValue];
+    }
+}
+
 @end

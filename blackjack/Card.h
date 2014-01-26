@@ -40,4 +40,8 @@ typedef enum {
 @property (nonatomic) CardSuit suit;
 @property (nonatomic) CardRank rank;
 
+- (BOOL)isAce;
+- (NSInteger)cardBaseValue;
+- (NSInteger)cardHighestValue;
+
 @end
