@@ -33,6 +33,8 @@
 		4F36863218946CAD00B02264 /* CardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F36863118946CAD00B02264 /* CardCollectionViewCell.m */; };
 		4F36863418946D0000B02264 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F36863318946D0000B02264 /* CardCollectionViewCell.xib */; };
 		4F36863A1894769600B02264 /* UIImage+BlackJackCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3686391894769600B02264 /* UIImage+BlackJackCards.m */; };
+		4F3686431894916F00B02264 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3686421894916F00B02264 /* Utility.m */; };
+		4F3686461894A2D600B02264 /* UserDefaultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3686451894A2D600B02264 /* UserDefaultManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,10 @@
 		4F36863318946D0000B02264 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		4F3686381894769600B02264 /* UIImage+BlackJackCards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BlackJackCards.h"; sourceTree = "<group>"; };
 		4F3686391894769600B02264 /* UIImage+BlackJackCards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BlackJackCards.m"; sourceTree = "<group>"; };
+		4F3686411894916F00B02264 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		4F3686421894916F00B02264 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		4F3686441894A2D600B02264 /* UserDefaultManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultManager.h; sourceTree = "<group>"; };
+		4F3686451894A2D600B02264 /* UserDefaultManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +227,8 @@
 		4F36860E1894519500B02264 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				4F3686441894A2D600B02264 /* UserDefaultManager.h */,
+				4F3686451894A2D600B02264 /* UserDefaultManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -230,6 +238,8 @@
 			children = (
 				4F3686381894769600B02264 /* UIImage+BlackJackCards.h */,
 				4F3686391894769600B02264 /* UIImage+BlackJackCards.m */,
+				4F3686411894916F00B02264 /* Utility.h */,
+				4F3686421894916F00B02264 /* Utility.m */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -360,11 +370,13 @@
 				4F3686181894532900B02264 /* AboutViewController.m in Sources */,
 				4F3686281894605400B02264 /* Card.m in Sources */,
 				4F0768BF18944FDD00A84A26 /* AppDelegate.m in Sources */,
+				4F3686431894916F00B02264 /* Utility.m in Sources */,
 				4F0768BB18944FDD00A84A26 /* main.m in Sources */,
 				4F36862B1894619300B02264 /* BlackJackHand.m in Sources */,
 				4F3686151894532100B02264 /* SettingsViewController.m in Sources */,
 				4F36863218946CAD00B02264 /* CardCollectionViewCell.m in Sources */,
 				4F36863A1894769600B02264 /* UIImage+BlackJackCards.m in Sources */,
+				4F3686461894A2D600B02264 /* UserDefaultManager.m in Sources */,
 				4F36861E1894558800B02264 /* CardCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
