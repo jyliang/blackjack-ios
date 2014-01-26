@@ -7,12 +7,20 @@
 //
 
 #import "AppDelegate.h"
+#import "GameManager.h"
+#import "UserDefaultManager.h"
+
+@interface AppDelegate ()
+
+@property (strong, nonatomic) GameManager *gameManager;
+
+@end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [self initGameManager];
     return YES;
 }
 							
@@ -41,6 +49,23 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - 
+
+- (void)initGameManager {
+    //either create a new one or restore it from coredata
+    
+    //TODO: integrate with coredatas
+    //points to restore:
+    //1. player data, balance especially
+    //2. current play data, dealer hand and player hand
+    
+    self.gameManager = [[GameManager alloc] init];
+}
+
+- (GameManager *)getGameManager {
+    return self.gameManager;
 }
 
 @end

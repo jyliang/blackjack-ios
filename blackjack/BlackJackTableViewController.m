@@ -11,18 +11,30 @@
 #import "AboutViewController.h"
 #import "CardCollectionViewController.h"
 
-#import "Deck.h"
 #import "Player.h"
+#import "GameManager.h"
+#import "AppDelegate.h"
 
-@interface BlackJackTableViewController ()
-
-@property (strong, nonatomic) Deck *deck;
+@interface BlackJackTableViewController () <GameManagerDelegate>
 
 @property (weak, nonatomic) CardCollectionViewController *dealerHandVC;
 @property (weak, nonatomic) CardCollectionViewController *playerHandVC;
 @property (weak, nonatomic) IBOutlet UILabel *bankBalanceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *betAmountLabel;
-@property (strong, nonatomic) Player *currentPlayer;
+@property (weak, nonatomic) GameManager *gameManager;
+
+@property (weak, nonatomic) IBOutlet UILabel *gamePlayStatusLabel;
+
+@property (weak, nonatomic) IBOutlet UIButton *dealButton;
+@property (weak, nonatomic) IBOutlet UIButton *doubleDownButton;
+@property (weak, nonatomic) IBOutlet UIButton *hitButton;
+@property (weak, nonatomic) IBOutlet UIButton *standButton;
+@property (weak, nonatomic) IBOutlet UIButton *clearBetButton;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *wagerIncreaseButton1;
+@property (weak, nonatomic) IBOutlet UIButton *wagerIncreaseButton2;
+@property (weak, nonatomic) IBOutlet UIButton *wagerIncreaseButton3;
 
 @end
 
@@ -30,11 +42,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.deck = [[Deck alloc] init];
-    [self.deck createNewDeck];
-    
-    self.currentPlayer = [[Player alloc] init];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.gameManager = [appDelegate getGameManager];
+    self.gameManager.dealderCardDealDelegate = self.dealerHandVC;
+    self.gameManager.playerCardDealDelegate = self.playerHandVC;
+    self.gameManager.delegate = self;
+    [self updateStatus];
+}
+
+#pragma mark - segue prep
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"dealerHand"]) {
+        self.dealerHandVC = segue.destinationViewController;
+    } else if ([segue.identifier isEqualToString:@"playerHand"]) {
+        self.playerHandVC = segue.destinationViewController;
+    }
 }
 
 #pragma mark - Actions
@@ -50,127 +73,47 @@
 }
 
 - (IBAction)dealButtonPressed {
-    //TODO: clear hands;
-
-    [self clearCards];
-    
-    [self dealCardtoPlayer];
-    [self dealCardToDealer];
-    [self dealCardtoPlayer];
-    [self dealCardToDealer];
-    
-}
-
-- (void)clearCards {
-    [self.playerHandVC clearCards];
-    [self.dealerHandVC clearCards];
-    [self.currentPlayer clearCards];
+    [self.gameManager dealInitialCards];
 }
 
 - (void)dealCardToDealer {
-    Card *card = [self.deck dealNextCard];
-    [self.dealerHandVC addCard:card];
+    [self.gameManager dealCardToDealer];
 }
 
 - (void)dealCardtoPlayer {
-    Card *card = [self.deck dealNextCard];
-    [self.playerHandVC addCard:card];
-    [self.currentPlayer addCard:card];
+    [self.gameManager dealCardToPlayer];
 }
 
 - (IBAction)doubleDownButtonTapped {
-    [self dealCardtoPlayer];
-    [self playerTurnComplete];
-    
+    [self.gameManager playerDoubleDown];
 }
 
 - (IBAction)hitButtonTapped {
-    [self dealCardtoPlayer];
-    if ([self shouldEndPlayerTurn]) {
-        [self playerTurnComplete];
-    }
+    [self.gameManager playerHit];
 }
 
 - (IBAction)standButtonTapped {
-    [self playerTurnComplete];
+    [self.gameManager playerStand];
 }
 
 - (IBAction)clearBetButtonTapped {
     
-}
-
-#pragma mark - Game Play Logic
-
-- (BOOL)shouldEndPlayerTurn {
-    BOOL shouldEndTurn = NO;
-    shouldEndTurn |= [self.currentPlayer.currentHand isBlackJack];
-    shouldEndTurn |= [self.currentPlayer.currentHand isBusted];
-    shouldEndTurn |= [self.currentPlayer.currentHand is21];
-    return shouldEndTurn;
-}
-
-- (BOOL)shouldEndDealerturn {
-    if ([self.currentPlayer.currentHand isBusted]) {
-        return YES;
-    }
-    BOOL shouldEndTurn = NO;
-    shouldEndTurn |= [self.dealerHandVC.currentHand isBlackJack];
-    shouldEndTurn |= [self.dealerHandVC.currentHand is21];
-    shouldEndTurn |= [self.dealerHandVC.currentHand isBusted];
-    shouldEndTurn |= [[[self.dealerHandVC.currentHand currentHandScores] firstObject] integerValue] >= 17; //TODO: dealer stand limit
-    return shouldEndTurn;
-}
-
-
-
-
-#pragma mark - Game State
-
-- (void)evaluatePlayerHand:(BlackJackHand *)hand {
     
 }
 
-- (void)playerTurnComplete {
-//    [Utility showAlertWithMessage:@"player turn finished"];
-//    if ([self.currentPlayer.currentHand isBlackJack]) {
-//        [Utility showAlertWithMessage:@"player got black jack"];
-//    } else if ([self.currentPlayer.currentHand isBusted]) {
-//        [Utility showAlertWithMessage:@"busted"];
-//    } else if ([self.currentPlayer.currentHand is21]) {
-//        [Utility showAlertWithMessage:@"got 21"];
-//    }
+#pragma mark - GameManagerDelegate
+
+- (void)updateStatus {
+    self.dealButton.hidden = ![self.gameManager playerCanDeal];
+    self.doubleDownButton.hidden = ![self.gameManager playerCanDoubleDown];
+    self.hitButton.hidden = ![self.gameManager playerCanHit];
+    self.standButton.hidden = ![self.gameManager playerCanStand];
     
-    [self startDealerAutoDeal];
-    
+    self.bankBalanceLabel.text = [NSString stringWithFormat:@"%.02f", [self.gameManager.currentPlayer getBankBalance]];
+    NSString *betBalance = [NSString stringWithFormat:@"%.02f", [self.gameManager.currentPlayer currentBetOnTable]];
+    [self.clearBetButton setTitle:betBalance forState:UIControlStateNormal];
+    self.gamePlayStatusLabel.text = self.gameManager.gameStatusString;
 }
 
-- (void)startDealerAutoDeal {
-    while (![self shouldEndDealerturn]) {
-        [self dealCardToDealer];
-    }
-    
-    [self dealerTurnComplete];
-}
-
-- (void)dealerTurnComplete {
-    //evaluate and pay out
-    ResultEvaluation result = [self.currentPlayer.currentHand evaluteAgainstHand:self.dealerHandVC.currentHand];
-    NSString *resultString = [NSString stringWithFormat:@" result is %d", result];
-    [Utility showAlertWithMessage:resultString];
-}
-
-- (void)gameComplete {
-    [self clearCards];
-}
-
-#pragma mark - segue prep
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"dealerHand"]) {
-        self.dealerHandVC = segue.destinationViewController;
-    } else if ([segue.identifier isEqualToString:@"playerHand"]) {
-        self.playerHandVC = segue.destinationViewController;
-    }
-}
 
 @end

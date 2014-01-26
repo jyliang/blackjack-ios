@@ -32,7 +32,7 @@
 
 - (NSArray *)currentHandScores {
     NSMutableArray *scores = [NSMutableArray array];
-    BOOL aceCardFound;
+    BOOL aceCardFound = NO;
     NSInteger score = 0;
     for (Card *card in self.cards) {
         if ([card isAce]) {

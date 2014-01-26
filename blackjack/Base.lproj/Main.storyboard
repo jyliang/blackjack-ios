@@ -63,7 +63,7 @@
                                             <action selector="clearBetButtonTapped" destination="rmM-Pt-5QI" eventType="touchUpInside" id="pl1-39-O5g"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bet Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ga5-ve-3Wz">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bet Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ga5-ve-3Wz">
                                         <rect key="frame" x="114" y="20" width="92" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -75,6 +75,27 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWr-e9-8gf">
+                                        <rect key="frame" x="5" y="64" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Bet +1">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xc-tT-yNl">
+                                        <rect key="frame" x="59" y="64" width="54" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Bet Min">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIy-c8-Rlw">
+                                        <rect key="frame" x="114" y="64" width="58" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Bet Max">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -170,6 +191,15 @@
                     <connections>
                         <outlet property="bankBalanceLabel" destination="YmR-6U-eil" id="Chm-8N-AZo"/>
                         <outlet property="betAmountLabel" destination="ga5-ve-3Wz" id="M54-Sq-eyV"/>
+                        <outlet property="clearBetButton" destination="iVa-DU-AAP" id="I7j-cM-u0U"/>
+                        <outlet property="dealButton" destination="E2N-fE-RBA" id="G88-PP-TlR"/>
+                        <outlet property="doubleDownButton" destination="DqN-hc-Pvh" id="eQd-kx-PjH"/>
+                        <outlet property="gamePlayStatusLabel" destination="ALN-bP-uvf" id="8hX-pM-TFa"/>
+                        <outlet property="hitButton" destination="L9u-C5-C9b" id="J2o-oA-dqn"/>
+                        <outlet property="standButton" destination="mUa-wm-hzA" id="wX7-Ci-uaE"/>
+                        <outlet property="wagerIncreaseButton1" destination="FWr-e9-8gf" id="tKi-fn-gKL"/>
+                        <outlet property="wagerIncreaseButton2" destination="9xc-tT-yNl" id="6ZX-PO-QKf"/>
+                        <outlet property="wagerIncreaseButton3" destination="jIy-c8-Rlw" id="e81-yY-wvR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y01-yI-WNz" userLabel="First Responder" sceneMemberID="firstResponder"/>

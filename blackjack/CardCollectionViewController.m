@@ -49,7 +49,7 @@
     return CGSizeMake(40, 62);
 }
 
-#pragma mark - 
+#pragma mark - Card Deal Protool
 
 - (void)addCard:(Card *)card {
     [self.collectionView performBatchUpdates:^{

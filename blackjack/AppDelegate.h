@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class GameManager;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+- (GameManager *)getGameManager;
 
 @end

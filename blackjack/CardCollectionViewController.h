@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "BlackJackHand.h"
+#import "CardDealDelegate.h"
 
-@interface CardCollectionViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface CardCollectionViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, CardDealDelegate>
 
 @property (strong, nonatomic) BlackJackHand *currentHand;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
-- (void)addCard:(Card *)card;
-- (void)clearCards;
+
 
 @end
