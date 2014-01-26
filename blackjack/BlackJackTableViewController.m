@@ -15,6 +15,8 @@
 #import "GameManager.h"
 #import "AppDelegate.h"
 
+#import "UserDefaultManager.h"
+
 @interface BlackJackTableViewController () <GameManagerDelegate>
 
 @property (weak, nonatomic) CardCollectionViewController *dealerHandVC;
@@ -48,6 +50,7 @@
     self.gameManager.playerCardDealDelegate = self.playerHandVC;
     self.gameManager.delegate = self;
     [self updateStatus];
+    [self updateBetButtons];
 }
 
 #pragma mark - segue prep
@@ -97,7 +100,21 @@
 }
 
 - (IBAction)clearBetButtonTapped {
+    [self.gameManager resetBet];
     
+}
+
+- (IBAction)increaseBetButtonTapped:(id)sender {
+    NSInteger betIncreaseValue = 0;
+    NSArray *values = [self.gameManager getBetIncreaseValues];
+    if (sender == self.wagerIncreaseButton1) {
+        betIncreaseValue = [[values objectAtIndex:0] integerValue];
+    } else if (sender == self.wagerIncreaseButton2) {
+        betIncreaseValue = [[values objectAtIndex:1] integerValue];
+    } else if (sender == self.wagerIncreaseButton3) {
+        betIncreaseValue = [[values objectAtIndex:2] integerValue];
+    }
+    [self.gameManager increaseBet:betIncreaseValue];
     
 }
 
@@ -111,8 +128,19 @@
     
     self.bankBalanceLabel.text = [NSString stringWithFormat:@"%.02f", [self.gameManager.currentPlayer getBankBalance]];
     NSString *betBalance = [NSString stringWithFormat:@"%.02f", [self.gameManager.currentPlayer currentBetOnTable]];
-    [self.clearBetButton setTitle:betBalance forState:UIControlStateNormal];
+    self.betAmountLabel.text = betBalance;
     self.gamePlayStatusLabel.text = self.gameManager.gameStatusString;
+    self.wagerIncreaseButton1.hidden = self.wagerIncreaseButton2.hidden = self.wagerIncreaseButton3.hidden = ![self.gameManager playerCanAdjustBet];
+    [self.clearBetButton setEnabled:[self.gameManager playerCanAdjustBet]];
+}
+
+- (void)updateBetButtons {
+    NSArray *values = [self.gameManager getBetIncreaseValues];
+    NSArray *buttons = @[self.wagerIncreaseButton1, self.wagerIncreaseButton2, self.wagerIncreaseButton3];
+    for (int i = 0; i < values.count; i++) {
+        NSString *buttonString = [NSString stringWithFormat:@"+ %@", [values objectAtIndex:i]];
+        [[buttons objectAtIndex:i] setTitle:buttonString forState:UIControlStateNormal];
+    }
 }
 
 

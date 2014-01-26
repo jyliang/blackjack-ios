@@ -21,12 +21,12 @@
     return self;
 }
 
-- (void)configureWithCard:(Card *)card {
+- (void)configureWithCard:(Card *)card shouldShowCard:(BOOL)showCard {
     self.card = card;
-    
     self.label.text = [NSString stringWithFormat:@"S%d R%d", card.suit, card.rank];
+
     
-    UIImage *cardImage = [UIImage imageWithCard:card];
+    UIImage *cardImage = showCard ? [UIImage imageWithCard:card] : [UIImage imageForCardBack];
     [self.imageView setImage:cardImage];
 }
 

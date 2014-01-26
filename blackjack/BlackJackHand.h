@@ -19,6 +19,7 @@ typedef enum {
 
 @interface BlackJackHand : NSObject
 @property (strong, nonatomic) NSMutableArray *cards;
+@property (nonatomic) BOOL shouldShowLastCard;
 
 
 - (NSArray *)currentHandScores;

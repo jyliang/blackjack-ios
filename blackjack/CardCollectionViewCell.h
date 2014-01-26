@@ -17,6 +17,6 @@
 @property (strong, nonatomic) Card *card;
 @property (nonatomic) BOOL shouldShowCard;
 
-- (void)configureWithCard:(Card *)card;
+- (void)configureWithCard:(Card *)card shouldShowCard:(BOOL)showCard;
 
 @end

@@ -13,6 +13,8 @@
 - (void)addCard:(Card *)card;
 - (void)clearCards;
 
+- (void)updateShouldShowLastCard:(BOOL)shouldShow;
+
 @optional
 - (void)removeCard:(Card *)card; //might be used for split hand
 

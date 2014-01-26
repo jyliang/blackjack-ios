@@ -26,6 +26,7 @@
     
     
     self.currentHand = [[BlackJackHand alloc] init];
+    [self.currentHand setShouldShowLastCard:YES];
 }
 
 #pragma mark - Collection View Data Source and Delegate
@@ -41,7 +42,8 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([CardCollectionViewCell class]) forIndexPath:indexPath];
     Card *card = [self.currentHand.cards objectAtIndex:indexPath.item];
-    [cell configureWithCard:card];
+    BOOL shouldShowCard = indexPath.item == 1 ? self.currentHand.shouldShowLastCard : YES;
+    [cell configureWithCard:card shouldShowCard:shouldShowCard];
     return cell;
 }
 
@@ -69,6 +71,17 @@
     } completion:^(BOOL finished) {
         
     }];
+}
+
+- (void)updateShouldShowLastCard:(BOOL)shouldShow {
+    self.currentHand.shouldShowLastCard = shouldShow;
+    if (self.currentHand.cards.count > 0) {
+        [self.collectionView performBatchUpdates:^{
+            [self.collectionView reloadItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:1 inSection:0]]];
+        } completion:^(BOOL finished) {
+            
+        }];
+    }
 }
 
 @end

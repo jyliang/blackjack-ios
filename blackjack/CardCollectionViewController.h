@@ -15,6 +15,4 @@
 @property (strong, nonatomic) BlackJackHand *currentHand;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
-
-
 @end

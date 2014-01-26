@@ -81,6 +81,9 @@
                                         <state key="normal" title="Bet +1">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="increaseBetButtonTapped:" destination="rmM-Pt-5QI" eventType="touchUpInside" id="OTu-Hm-5DA"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xc-tT-yNl">
                                         <rect key="frame" x="59" y="64" width="54" height="30"/>
@@ -88,6 +91,9 @@
                                         <state key="normal" title="Bet Min">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="increaseBetButtonTapped:" destination="rmM-Pt-5QI" eventType="touchUpInside" id="7aT-E9-Gly"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIy-c8-Rlw">
                                         <rect key="frame" x="114" y="64" width="58" height="30"/>
@@ -95,6 +101,9 @@
                                         <state key="normal" title="Bet Max">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="increaseBetButtonTapped:" destination="rmM-Pt-5QI" eventType="touchUpInside" id="Xq9-c0-ARZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>

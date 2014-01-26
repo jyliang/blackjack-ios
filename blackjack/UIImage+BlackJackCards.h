@@ -12,6 +12,7 @@
 
 @interface UIImage (BlackJackCards)
 
++ (UIImage *)imageForCardBack;
 + (UIImage *)imageWithCard:(Card *)card;
 
 @end

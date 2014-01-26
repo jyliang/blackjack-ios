@@ -7,6 +7,7 @@
 //
 
 #import "Player.h"
+#import "UserDefaultManager.h"
 
 #define DEFAULT_BALANCE 500
 
@@ -23,6 +24,7 @@
     if (self) {
         self.currentHand = [[BlackJackHand alloc] init];
         self.currentBetOnTable = 0;
+        [self.currentHand setShouldShowLastCard:YES];
         self.balance = DEFAULT_BALANCE;
     }
     return self;
@@ -44,19 +46,38 @@
     return self.balance > amount;
 }
 
-- (BOOL)depositeMoney:(CGFloat)money {
+- (BOOL)depositePayout:(CGFloat)money {
+    self.balance += money;
+    return YES;
+}
+
+- (BOOL)depositeMoneyFromTable:(CGFloat)money {
     self.currentBetOnTable -= money;
     self.balance += money;
     return YES;
 }
 
 - (BOOL)betMoney:(CGFloat)money {
-    if (self.balance < money) {
+    CGFloat adjustedMoney = money;
+    if (self.balance == 0) {
         return NO;
+    } else if (self.balance < money) {
+        adjustedMoney = self.balance;
     }
-    self.currentBetOnTable += money;
-    self.balance -= money;
+    int maxBet = [[UserDefaultManager sharedInstance] maxBet];
+    if (self.currentBetOnTable + adjustedMoney > maxBet) {
+        adjustedMoney = maxBet - self.currentBetOnTable;
+    }
+    
+    self.currentBetOnTable += adjustedMoney;
+    self.balance -= adjustedMoney;
     return YES;
+}
+
+- (void)collectBet {
+    self.balance += self.currentBetOnTable;
+    self.currentBetOnTable = 0;
+
 }
 
 @end

@@ -21,7 +21,9 @@
 - (void)clearCards;
 
 - (BOOL)canAffordAmount:(CGFloat)amount;
-- (BOOL)depositeMoney:(CGFloat)money;
+- (BOOL)depositePayout:(CGFloat)money;
+- (BOOL)depositeMoneyFromTable:(CGFloat)money;
 - (BOOL)betMoney:(CGFloat)money;
+- (void)collectBet;
 
 @end

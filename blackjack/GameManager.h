@@ -48,10 +48,18 @@ typedef enum {
 - (void)playerStand;
 - (void)playerSurrender;
 
+- (void)increaseBet:(NSInteger)betAmount;
+- (void)resetBet;
+
+- (BOOL)playerCanAdjustBet;
 - (BOOL)playerCanDoubleDown;
 - (BOOL)playerCanHit;
 - (BOOL)playerCanStand;
 - (BOOL)playerCanDeal;
 - (BOOL)playerCanSurrender; //TODO: not linked;
+
+- (NSArray *)getBetIncreaseValues;
+
+
 
 @end

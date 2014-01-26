@@ -21,6 +21,12 @@
     
 }
 
++ (UIImage *)imageForCardBack {
+    UIImage *baseImage = [UIImage imageNamed:@"cards"];
+    CGRect croppingRect = CGRectMake(2*CARD_WIDTH, 4*CARD_HEIGHT, CARD_WIDTH, CARD_HEIGHT);
+    return [UIImage getCroppedImage:baseImage toRect:croppingRect];
+}
+
 + (UIImage *)getCroppedImage:(UIImage *)sourceImage toRect:(CGRect)rect{
     CGImageRef imageRef = CGImageCreateWithImageInRect([sourceImage CGImage], rect);
     UIImage *image = [UIImage imageWithCGImage:imageRef];

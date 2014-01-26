@@ -18,4 +18,9 @@
 - (BOOL)isFirstUse;
 - (void)completeFirstUse;
 
+- (NSInteger)minBet;
+- (NSInteger)maxBet;
+- (void)setMinBet:(NSInteger)amount;
+- (void)setMaxBet:(NSInteger)amount;
+
 @end
