@@ -33,6 +33,8 @@
 		4F36863218946CAD00B02264 /* CardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F36863118946CAD00B02264 /* CardCollectionViewCell.m */; };
 		4F36863418946D0000B02264 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F36863318946D0000B02264 /* CardCollectionViewCell.xib */; };
 		4F36863A1894769600B02264 /* UIImage+BlackJackCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3686391894769600B02264 /* UIImage+BlackJackCards.m */; };
+		4F36863D18947A8A00B02264 /* CurrentGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F36863C18947A8A00B02264 /* CurrentGame.m */; };
+		4F36864018947B2400B02264 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F36863F18947B2400B02264 /* Player.m */; };
 		4F3686431894916F00B02264 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3686421894916F00B02264 /* Utility.m */; };
 		4F3686461894A2D600B02264 /* UserDefaultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3686451894A2D600B02264 /* UserDefaultManager.m */; };
 /* End PBXBuildFile section */
@@ -88,6 +90,10 @@
 		4F36863318946D0000B02264 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		4F3686381894769600B02264 /* UIImage+BlackJackCards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BlackJackCards.h"; sourceTree = "<group>"; };
 		4F3686391894769600B02264 /* UIImage+BlackJackCards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BlackJackCards.m"; sourceTree = "<group>"; };
+		4F36863B18947A8A00B02264 /* CurrentGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentGame.h; sourceTree = "<group>"; };
+		4F36863C18947A8A00B02264 /* CurrentGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentGame.m; sourceTree = "<group>"; };
+		4F36863E18947B2400B02264 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		4F36863F18947B2400B02264 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		4F3686411894916F00B02264 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		4F3686421894916F00B02264 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		4F3686441894A2D600B02264 /* UserDefaultManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultManager.h; sourceTree = "<group>"; };
@@ -220,6 +226,10 @@
 				4F36862A1894619300B02264 /* BlackJackHand.m */,
 				4F36862C189461DC00B02264 /* Deck.h */,
 				4F36862D189461DC00B02264 /* Deck.m */,
+				4F36863B18947A8A00B02264 /* CurrentGame.h */,
+				4F36863C18947A8A00B02264 /* CurrentGame.m */,
+				4F36863E18947B2400B02264 /* Player.h */,
+				4F36863F18947B2400B02264 /* Player.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -368,6 +378,7 @@
 				4F3686121894531600B02264 /* BlackJackTableViewController.m in Sources */,
 				4F36861B1894547200B02264 /* BaseViewController.m in Sources */,
 				4F3686181894532900B02264 /* AboutViewController.m in Sources */,
+				4F36863D18947A8A00B02264 /* CurrentGame.m in Sources */,
 				4F3686281894605400B02264 /* Card.m in Sources */,
 				4F0768BF18944FDD00A84A26 /* AppDelegate.m in Sources */,
 				4F3686431894916F00B02264 /* Utility.m in Sources */,
@@ -376,6 +387,7 @@
 				4F3686151894532100B02264 /* SettingsViewController.m in Sources */,
 				4F36863218946CAD00B02264 /* CardCollectionViewCell.m in Sources */,
 				4F36863A1894769600B02264 /* UIImage+BlackJackCards.m in Sources */,
+				4F36864018947B2400B02264 /* Player.m in Sources */,
 				4F3686461894A2D600B02264 /* UserDefaultManager.m in Sources */,
 				4F36861E1894558800B02264 /* CardCollectionViewController.m in Sources */,
 			);

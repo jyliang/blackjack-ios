@@ -25,7 +25,7 @@
     [self.collectionView registerNib:[UINib nibWithNibName:@"CardCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:NSStringFromClass([CardCollectionViewCell class])];
     
     
-    self.currentHand = [[Hand alloc] init];
+    self.currentHand = [[BlackJackHand alloc] init];
 }
 
 #pragma mark - Collection View Data Source and Delegate
@@ -57,6 +57,15 @@
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:self.currentHand.cards.count -1 inSection:0];
 
         [self.collectionView insertItemsAtIndexPaths:@[indexPath]];
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
+- (void)clearCards {
+    [self.collectionView performBatchUpdates:^{
+        [self.currentHand.cards removeAllObjects];
+        [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
     } completion:^(BOOL finished) {
         
     }];
