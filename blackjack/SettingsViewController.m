@@ -77,8 +77,8 @@
 }
 
 - (void)updateValueLabels {
-    self.minBetLabel.text = [NSString stringWithFormat:@"$ %d", self.minBetValue];
-    self.maxBetLabel.text = [NSString stringWithFormat:@"$ %d", self.maxBetValue];
+    self.minBetLabel.text = [NSString stringWithFormat:@"$ %ld", (long)self.minBetValue];
+    self.maxBetLabel.text = [NSString stringWithFormat:@"$ %ld", (long)self.maxBetValue];
 }
 
 @end

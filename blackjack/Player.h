@@ -14,6 +14,7 @@
 
 @property (nonatomic) CGFloat currentBetOnTable;
 @property (strong, nonatomic) BlackJackHand *currentHand;
+@property (nonatomic) CGFloat nextRoundDefaultBet;
 
 - (CGFloat)getBankBalance;
 

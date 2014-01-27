@@ -47,7 +47,7 @@
     NSMutableArray *shuffledCards = [NSMutableArray arrayWithCapacity:cards.count];
     NSMutableArray *cardCopy = [NSMutableArray arrayWithArray:cards];
     
-    for (int i = cards.count; i > 1; i--) {
+    for (NSInteger i = cards.count; i > 1; i--) {
         int randomIndex = arc4random() % i;
         Card *card = [cardCopy objectAtIndex:randomIndex];
         [cardCopy removeObjectAtIndex:randomIndex];

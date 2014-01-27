@@ -65,6 +65,7 @@
     [self.dealerHand setShouldShowLastCard:NO];
     [self.dealderCardDealDelegate updateShouldShowLastCard:NO];
     if ([self betMeetRequirement]) {
+        self.currentPlayer.nextRoundDefaultBet = self.currentPlayer.currentBetOnTable;
         [self dealCardToPlayer];
         [self dealCardToDealer];
         [self dealCardToPlayer];
@@ -77,12 +78,9 @@
         if (self.currentPlayer.currentBetOnTable == 0) {
             [Utility showAlertWithMessage:@"Please increase your bet first."];
         } else {
-            [Utility showAlertWithMessage:[NSString stringWithFormat:@"Minimum bet is $%d", [[UserDefaultManager sharedInstance] minBet]]];
+            [Utility showAlertWithMessage:[NSString stringWithFormat:@"Minimum bet is $%ld",(long)[[UserDefaultManager sharedInstance] minBet]]];
         }
-
     }
-    
-
 }
 
 - (void)playerDoubleDown {
@@ -128,7 +126,7 @@
 }
 
 - (BOOL)playerCanDoubleDown {
-    if ([self playerCanHit] && [self.currentPlayer canAffordAmount:self.currentPlayer.currentBetOnTable]) {
+    if ([self playerCanHit] && [self.currentPlayer canAffordAmount:self.currentPlayer.currentBetOnTable] && self.currentPlayer.currentHand.cards.count == 2) {
         return YES;
     }
     return NO;
@@ -152,6 +150,13 @@
 
 - (BOOL)playerCanSurrender {
     return self.gameStage == kStagePlayerTurn && self.currentPlayer.currentHand.cards.count == 2;
+}
+
+- (NSArray *)getBetIncreaseValues {
+    UserDefaultManager *mgr = [UserDefaultManager sharedInstance];
+    NSInteger minBet = [mgr minBet];
+    NSInteger maxBet = [mgr maxBet];
+    return @[@1, [NSNumber numberWithInteger:minBet], [NSNumber numberWithInteger:maxBet/5]];
 }
 
 #pragma mark - Game Play Logic
@@ -179,20 +184,7 @@
 
 
 #pragma mark - Game State
-
-- (void)evaluatePlayerHand:(BlackJackHand *)hand {
-    
-}
-
 - (void)playerTurnComplete {
-    //    [Utility showAlertWithMessage:@"player turn finished"];
-    //    if ([self.currentPlayer.currentHand isBlackJack]) {
-    //        [Utility showAlertWithMessage:@"player got black jack"];
-    //    } else if ([self.currentPlayer.currentHand isBusted]) {
-    //        [Utility showAlertWithMessage:@"busted"];
-    //    } else if ([self.currentPlayer.currentHand is21]) {
-    //        [Utility showAlertWithMessage:@"got 21"];
-    //    }
     [self updateStageStatus:kStageDealerTurn];
     [self.dealerHand setShouldShowLastCard:YES];
     [self.dealderCardDealDelegate updateShouldShowLastCard:YES];
@@ -209,35 +201,10 @@
     [self dealerTurnComplete];
 }
 
-- (CGFloat)getPayoutWithBetAmount:(CGFloat)betAmount withResult:(ResultEvaluation)result {
-    CGFloat payout = 0;
-    switch (self.result) {
-        case kResultWinBlackJack: {
-            payout = betAmount * 2;
-            break;
-        }
-        case kResultWin: {
-            payout = betAmount * 2;
-            break;
-        }
-        case kResultLose: {
-            payout = 0;
-            break;
-        }
-        case kResultTie: {
-            payout = betAmount;
-            break;
-        }
-        default:
-            break;
-    }
-    return payout;
-}
-
 - (void)dealerTurnComplete {
     //evaluate and pay out
     self.result = [self.currentPlayer.currentHand evaluteAgainstHand:self.dealerHand];
-    CGFloat lastBet = self.currentPlayer.currentBetOnTable;
+    CGFloat lastBet = self.currentPlayer.nextRoundDefaultBet;
     CGFloat payout = [self getPayoutWithBetAmount:self.currentPlayer.currentBetOnTable withResult:self.result];
     [self.currentPlayer depositePayout:payout];
     self.currentPlayer.currentBetOnTable = 0;
@@ -278,7 +245,7 @@
     if (stage == kStageEnd) {
         switch (self.result) {
             case kResultWinBlackJack:
-                self.gameStatusString = @"BlackJack Hand Win";
+                self.gameStatusString = @"Nice! BlackJack Hand Win!";
                 break;
             case kResultWin:
                 self.gameStatusString = @"You win!";
@@ -296,15 +263,30 @@
     [self.delegate updateStatus];
 }
 
-- (void)gameComplete {
-    [self clearCards];
-}
-
-- (NSArray *)getBetIncreaseValues {
-    UserDefaultManager *mgr = [UserDefaultManager sharedInstance];
-    NSInteger minBet = [mgr minBet];
-    NSInteger maxBet = [mgr maxBet];
-    return @[@1, [NSNumber numberWithInteger:minBet], [NSNumber numberWithInteger:maxBet/5]];
+- (CGFloat)getPayoutWithBetAmount:(CGFloat)betAmount withResult:(ResultEvaluation)result {
+    CGFloat payout = 0;
+    switch (self.result) {
+        case kResultWinBlackJack: {
+            payout = betAmount * 2;
+            break;
+        }
+        case kResultWin: {
+            payout = betAmount * 2;
+            break;
+        }
+        case kResultLose: {
+            payout = 0;
+            break;
+        }
+        case kResultTie: {
+            payout = betAmount;
+            break;
+        }
+        default:
+            break;
+    }
+    return payout;
 }
 
 @end
+

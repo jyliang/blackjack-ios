@@ -40,10 +40,10 @@
         }
         score += [card cardBaseValue];
     }
-    [scores addObject:[NSNumber numberWithInt:score]];
+    [scores addObject:[NSNumber numberWithLong:score]];
     if (aceCardFound) {
         if (score + 10 <= 21) {
-            [scores addObject:[NSNumber numberWithInt:score+10]];
+            [scores addObject:[NSNumber numberWithLong:score+10]];
         }
     }
     return scores;

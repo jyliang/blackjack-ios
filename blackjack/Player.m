@@ -64,7 +64,7 @@
     } else if (self.balance < money) {
         adjustedMoney = self.balance;
     }
-    int maxBet = [[UserDefaultManager sharedInstance] maxBet];
+    NSInteger maxBet = [[UserDefaultManager sharedInstance] maxBet];
     if (self.currentBetOnTable + adjustedMoney > maxBet) {
         adjustedMoney = maxBet - self.currentBetOnTable;
     }
